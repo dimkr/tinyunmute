@@ -1,0 +1,20 @@
+ _   _                                         _
+| |_(_)_ __  _   _ _   _ _ __  _ __ ___  _   _| |_ ___
+| __| | '_ \| | | | | | | '_ \| '_ ` _ \| | | | __/ _ \
+| |_| | | | | |_| | |_| | | | | | | | | | |_| | ||  __/
+ \__|_|_| |_|\__, |\__,_|_| |_|_| |_| |_|\__,_|\__\___|
+             |___/
+
+Overview
+========
+
+tinyunmute is a simple, tinyalsa-based (https://github.com/tinyalsa/tinyalsa)
+tool for unmuting all mixer controls.
+
+Legal Information
+=================
+
+tinyunmute is licensed under a 2-clause BSD license, see COPYING for the license
+text. For a list of its authors and contributors, see AUTHORS.
+
+The ASCII art logo at the top was made using FIGlet (http://www.figlet.org/).
