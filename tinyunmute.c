@@ -23,6 +23,9 @@ int main() {
 	/* the number of control values */
 	unsigned int values_count;
 
+	/* a control value */
+	int value;
+
 	/* loop counters */
 	unsigned int i;
 	unsigned int j;
@@ -41,13 +44,24 @@ int main() {
 		type = mixer_ctl_get_type(control);
 		values_count = mixer_ctl_get_num_values(control);
 
-		/* ignore non-boolean controls */
-		if (MIXER_CTL_TYPE_BOOL != type)
-			continue;
+		/* decide which value to assign */
+		switch (type) {
+			case MIXER_CTL_TYPE_BOOL:
+				value = 1;
+				break;
+
+			case MIXER_CTL_TYPE_INT:
+				value = 50;
+				break;
+
+			default:
+				continue;
+
+		}
 
 		/* unmute the control */
 		for (j = 0; values_count > j; ++j) {
-			if (0 != mixer_ctl_set_value(control, j, 1))
+			if (0 != mixer_ctl_set_value(control, j, value))
 				goto close_mixer;
 		}
 	}
